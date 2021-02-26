@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { challangesContext } from '../contexts/ChallengesContext'
 import styles from '../styles/components/Countdown.module.css'
 
 // #jornadainfinita
 let countdownTimeout: NodeJS.Timeout
 let cicle = 0.1
 export function Countdown(){
+    const {startNewChallenge} = useContext(challangesContext)
     const [time, setTime] = useState(cicle * 60);
     const [isActive, setIsActive] = useState(false)
     const minutes = Math.floor(time / 60) ;
@@ -29,6 +31,7 @@ export function Countdown(){
         }else if(isActive && time == 0){
             setHasFinished(true)
             setIsActive(false)
+            startNewChallenge()
         }
     }, [isActive, time])
     return (
