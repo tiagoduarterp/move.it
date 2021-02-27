@@ -13,7 +13,7 @@ interface CountdownProviderProps {
     children: ReactNode;
 }
 let countdownTimeout: NodeJS.Timeout
-let cicle = 0.1
+let cicle = 25
 
 export const CountdownContext = createContext({} as CountdownContextData)
 export function CountdownProvider({ children }:CountdownProviderProps){
