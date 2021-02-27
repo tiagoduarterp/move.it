@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import { challangesContext } from '../contexts/ChallengesContext'
-import {CountdownContext } from '../contexts/CountDownContext'
+import {CountdownContext } from '../contexts/CountdownContext'
 import styles from '../styles/components/Countdown.module.css'
 
 // #jornadainfinita

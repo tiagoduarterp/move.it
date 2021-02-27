@@ -7,7 +7,7 @@ import { CompletedChallenges } from '../components/CompletedChallenges'
 import { Countdown } from '../components/Countdown'
 import Heade from 'next/head'
 import { ChallengeBox } from '../components/ChallengeBox'
-import { CountdownProvider } from '../contexts/CountDownContext'
+import { CountdownProvider } from '../contexts/CountdownContext'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
 
 interface HomeProps {
